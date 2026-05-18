@@ -24,11 +24,11 @@ namespace progra_projet_LABEYE
 
             Cef.Initialize(new CefSettings());
 
-            browser = new ChromiumWebBrowser("https://www.google.com");
+            browser = new ChromiumWebBrowser("https://www.google.com"); // URL par défaut
 
-            browser.Dock = DockStyle.Fill;
+            browser.Dock = DockStyle.Fill; // Remplit tout le panel
 
-            panelBrowser.Controls.Add(browser);
+            panelBrowser.Controls.Add(browser); // Ajoute le navigateur au panel
         }
 
         private void portscoms_Load(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace progra_projet_LABEYE
 
         }
 
-        private void btnConnect_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e) //boutton qui lit sur le port série et affiche les données GPS
         {
             try
             {
@@ -53,7 +53,7 @@ namespace progra_projet_LABEYE
                 MessageBox.Show(ex.Message);
             }
         }
-        private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e) //sert a lire les données GPS reçues sur le port série et les afficher dans un TextBox, puis à traiter les données GPS pour extraire les coordonnées et afficher la position sur une carte Google Maps
         {
             string data = port.ReadLine();
 
@@ -68,38 +68,32 @@ namespace progra_projet_LABEYE
         {
             try
             {
-                if (!trame.StartsWith("$GPGGA"))
+                if (!trame.StartsWith("$GPGGA")) //verif que la trame reçue est bien une trame GPS de type GPGGA
                     return;
 
-                string[] parts = trame.Split(',');
+                string[] parts = trame.Split(','); // Séparer la trame en parties
 
-                // Coordonnées GPS brutes
+                // Coordonnées GPS brutes et directions
                 string latRaw = parts[2];
                 string latDir = parts[3];
 
                 string lonRaw = parts[4];
                 string lonDir = parts[5];
 
-                // ---------- LATITUDE ----------
-                // Exemple : 5037.2947
+                // ---------- LATITUDE ----------7
 
-                double lat = double.Parse(latRaw, System.Globalization.CultureInfo.InvariantCulture);
+                double lat = double.Parse(latRaw, System.Globalization.CultureInfo.InvariantCulture); // Exemple : 4807.038
 
-                double latDegrees = Math.Floor(lat / 100);
-
+                double latDegrees = Math.Floor(lat / 100); 
                 double latMinutes = lat - (latDegrees * 100);
-
                 double latitude = latDegrees + (latMinutes / 60);
 
                 // ---------- LONGITUDE ----------
-                // Exemple : 00535.2579
 
                 double lon = double.Parse(lonRaw, System.Globalization.CultureInfo.InvariantCulture);
 
                 double lonDegrees = Math.Floor(lon / 100);
-
                 double lonMinutes = lon - (lonDegrees * 100);
-
                 double longitude = lonDegrees + (lonMinutes / 60);
 
                 // Sud / Ouest
