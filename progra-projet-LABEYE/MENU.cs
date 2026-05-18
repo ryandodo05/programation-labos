@@ -88,5 +88,16 @@ namespace progra_projet_LABEYE
         {
             EcranExplorateur f3 = new EcranExplorateur(); f3.Show();
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            portscoms f3 = new portscoms(); f3.Show();
+
+        }
     }
 }

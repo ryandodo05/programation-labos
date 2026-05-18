@@ -65,7 +65,7 @@
             this.tsddbApparence});
             this.tsCommandes.Location = new System.Drawing.Point(0, 0);
             this.tsCommandes.Name = "tsCommandes";
-            this.tsCommandes.Size = new System.Drawing.Size(1372, 27);
+            this.tsCommandes.Size = new System.Drawing.Size(1372, 31);
             this.tsCommandes.TabIndex = 0;
             this.tsCommandes.Text = "toolStrip1";
             this.tsCommandes.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsCommandes_ItemClicked);
@@ -76,14 +76,14 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton1.Text = "tsbQuitter";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // tsddbApparence
             // 
@@ -96,35 +96,35 @@
             this.tsddbApparence.Image = ((System.Drawing.Image)(resources.GetObject("tsddbApparence.Image")));
             this.tsddbApparence.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsddbApparence.Name = "tsddbApparence";
-            this.tsddbApparence.Size = new System.Drawing.Size(34, 24);
+            this.tsddbApparence.Size = new System.Drawing.Size(34, 28);
             this.tsddbApparence.Text = "toolStripDropDownButton1";
             this.tsddbApparence.Click += new System.EventHandler(this.tsddbApparence_Click);
             // 
             // tsaPetitesIcones
             // 
             this.tsaPetitesIcones.Name = "tsaPetitesIcones";
-            this.tsaPetitesIcones.Size = new System.Drawing.Size(224, 26);
+            this.tsaPetitesIcones.Size = new System.Drawing.Size(191, 26);
             this.tsaPetitesIcones.Text = "petits icones";
             this.tsaPetitesIcones.Click += new System.EventHandler(this.tsaPetitesIcones_Click);
             // 
             // tsaGrandesIcones
             // 
             this.tsaGrandesIcones.Name = "tsaGrandesIcones";
-            this.tsaGrandesIcones.Size = new System.Drawing.Size(224, 26);
+            this.tsaGrandesIcones.Size = new System.Drawing.Size(191, 26);
             this.tsaGrandesIcones.Text = "grandes icones";
             this.tsaGrandesIcones.Click += new System.EventHandler(this.tsaGrandesIcones_Click);
             // 
             // tsaListe
             // 
             this.tsaListe.Name = "tsaListe";
-            this.tsaListe.Size = new System.Drawing.Size(224, 26);
+            this.tsaListe.Size = new System.Drawing.Size(191, 26);
             this.tsaListe.Text = "liste";
             this.tsaListe.Click += new System.EventHandler(this.tsaListe_Click);
             // 
             // tsaDetail
             // 
             this.tsaDetail.Name = "tsaDetail";
-            this.tsaDetail.Size = new System.Drawing.Size(224, 26);
+            this.tsaDetail.Size = new System.Drawing.Size(191, 26);
             this.tsaDetail.Text = "detail";
             this.tsaDetail.Click += new System.EventHandler(this.tsaDetail_Click);
             // 
@@ -141,7 +141,7 @@
             // scSeparateur
             // 
             this.scSeparateur.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scSeparateur.Location = new System.Drawing.Point(0, 27);
+            this.scSeparateur.Location = new System.Drawing.Point(0, 31);
             this.scSeparateur.Name = "scSeparateur";
             // 
             // scSeparateur.Panel1
@@ -151,7 +151,7 @@
             // scSeparateur.Panel2
             // 
             this.scSeparateur.Panel2.Controls.Add(this.lvFichiers);
-            this.scSeparateur.Size = new System.Drawing.Size(1372, 455);
+            this.scSeparateur.Size = new System.Drawing.Size(1372, 451);
             this.scSeparateur.SplitterDistance = 457;
             this.scSeparateur.TabIndex = 2;
             // 

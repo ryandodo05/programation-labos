@@ -38,24 +38,27 @@ namespace progra_projet_LABEYE
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.LABO7 = new System.Windows.Forms.Button();
             this.labo6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btlab4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -166,6 +169,7 @@ namespace progra_projet_LABEYE
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label11);
@@ -181,6 +185,16 @@ namespace progra_projet_LABEYE
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cours de Programmation";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(13, 557);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 22);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "LABO 8";
             // 
             // label13
             // 
@@ -226,6 +240,7 @@ namespace progra_projet_LABEYE
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.LABO7);
             this.groupBox2.Controls.Add(this.labo6);
@@ -241,6 +256,18 @@ namespace progra_projet_LABEYE
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Programmes";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(6, 552);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(276, 35);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "laboratoire 8";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // LABO7
             // 
@@ -292,6 +319,7 @@ namespace progra_projet_LABEYE
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label12);
@@ -307,6 +335,17 @@ namespace progra_projet_LABEYE
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Status";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Rubik", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label16.Location = new System.Drawing.Point(21, 553);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(89, 28);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "FINI ✔";
             // 
             // label14
             // 
@@ -366,38 +405,39 @@ namespace progra_projet_LABEYE
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Programmation IS2 KRAUS";
             // 
-            // label15
+            // label17
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(13, 557);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 22);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "LABO 8";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(13, 625);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 22);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "LABO 9";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // button2
+            // button3
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(6, 552);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(276, 35);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "laboratoire 8";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(6, 620);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(276, 35);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "laboratoire 9";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label16
+            // label18
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Rubik", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(21, 553);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 28);
-            this.label16.TabIndex = 13;
-            this.label16.Text = "FINI ✔";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Rubik", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label18.Location = new System.Drawing.Point(21, 621);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(89, 28);
+            this.label18.TabIndex = 14;
+            this.label18.Text = "FINI ✔";
             // 
             // MENU
             // 
@@ -447,5 +487,8 @@ namespace progra_projet_LABEYE
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label18;
     }
 }
