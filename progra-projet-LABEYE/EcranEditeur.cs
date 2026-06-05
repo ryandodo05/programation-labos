@@ -19,6 +19,14 @@ namespace progra_projet_LABEYE
             InitializeComponent();
             sFichier = "";
             bModifier = false;
+
+            // Vérification que les composants existent (pour éviter les erreurs)
+            if (rtbTexte == null)
+                throw new Exception("Le RichTextBox 'rtbTexte' n'est pas défini dans le designer.");
+            if (sfdEnregistrer == null)
+                throw new Exception("Le dialogue 'sfdEnregistrer' n'est pas défini dans le designer.");
+            if (ofdOuvrir == null)
+                throw new Exception("Le dialogue 'ofdOuvrir' n'est pas défini dans le designer.");
         }
         private void rtbTexte_TextChanged(object sender, EventArgs e)
         {
@@ -30,23 +38,20 @@ namespace progra_projet_LABEYE
             if (!bModifier) return true;
 
             DialogResult rep = MessageBox.Show(
-                "Le texte a été modifié, enregistrer ?",
+                "Le texte a été modifié. Voulez-vous enregistrer les modifications ?",
                 "Attention",
                 MessageBoxButtons.YesNoCancel,
                 MessageBoxIcon.Warning);
 
-            if (rep == DialogResult.Yes)
+            switch (rep)
             {
-                FichierEnregistrer();
-                return true;
-            }
-            else if (rep == DialogResult.No)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+                case DialogResult.Yes:
+                    FichierEnregistrer();
+                    return true;
+                case DialogResult.No:
+                    return true;
+                default: // DialogResult.Cancel
+                    return false;
             }
         }
 
@@ -54,14 +59,27 @@ namespace progra_projet_LABEYE
         {
             if (string.IsNullOrEmpty(sFichier))
             {
+                // Si aucun fichier n'est ouvert, on demande un nouveau nom
                 if (sfdEnregistrer.ShowDialog() == DialogResult.OK)
+                {
                     sFichier = sfdEnregistrer.FileName;
+                }
                 else
-                    return;
+                {
+                    return; // Annulé par l'utilisateur
+                }
             }
 
-            rtbTexte.SaveFile(sFichier, RichTextBoxStreamType.RichText);
-            bModifier = false;
+            try
+            {
+                rtbTexte.SaveFile(sFichier, RichTextBoxStreamType.RichText);
+                bModifier = false;
+                MessageBox.Show("Fichier enregistré avec succès !", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur lors de l'enregistrement : {ex.Message}", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Nouveau_Click(object sender, EventArgs e)

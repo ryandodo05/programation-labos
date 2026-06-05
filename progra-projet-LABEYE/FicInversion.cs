@@ -17,10 +17,13 @@ namespace progra_projet_LABEYE
         {
             InitializeComponent();
 
-            img1.Left = (this.ClientSize.Width - img1.Width) / 2 - img1.Width / 2; //centrer les deux images par rapport a la taille de la box
+            img1.Left = (this.ClientSize.Width - img1.Width) / 2 - img1.Width / 2; // Centrer les deux images
             img1.Top = (this.ClientSize.Height - img1.Height) / 2;
             img2.Left = img1.Right + 10;
             img2.Top = img1.Top;
+
+            img1.Image = Image.FromFile("1.jpg");
+            img2.Image = Image.FromFile("2.jpg");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -37,14 +40,21 @@ namespace progra_projet_LABEYE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Image temp = img1.Image; // changement entre les deux images
-            img1.Image = img2.Image;
-            img2.Image = temp;
+            if (img1.Image != null && img2.Image != null)
+            {
+                Image temp = img1.Image;
+                img1.Image = img2.Image;
+                img2.Image = temp;
+            }
+            else
+            {
+                MessageBox.Show("Les images ne sont pas chargées !");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 f2 = new Form2(); // ouvrir form 2
+            Form2 f2 = new Form2(); // Ouvrir form 2
             f2.Show();
             this.Hide();
         }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FicInversion));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.img2 = new System.Windows.Forms.PictureBox();
@@ -61,7 +60,6 @@
             // 
             // img2
             // 
-            this.img2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("img2.BackgroundImage")));
             this.img2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.img2.Location = new System.Drawing.Point(369, 50);
             this.img2.Name = "img2";
@@ -72,7 +70,6 @@
             // 
             // img1
             // 
-            this.img1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("img1.BackgroundImage")));
             this.img1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.img1.Location = new System.Drawing.Point(37, 50);
             this.img1.Name = "img1";
@@ -82,7 +79,7 @@
             this.img1.TabStop = false;
             this.img1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form1
+            // FicInversion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +88,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.img2);
             this.Controls.Add(this.img1);
-            this.Name = "Form1";
+            this.Name = "FicInversion";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.img2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.img1)).EndInit();
