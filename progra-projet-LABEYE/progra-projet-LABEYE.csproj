@@ -99,6 +99,18 @@
     <Compile Include="FicInversion.Designer.cs">
       <DependentUpon>FicInversion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHistograme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistograme.Designer.cs">
+      <DependentUpon>FormHistograme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNumerique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNumerique.Designer.cs">
+      <DependentUpon>formNumerique.cs</DependentUpon>
+    </Compile>
     <Compile Include="Listes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FicInversion.resx">
       <DependentUpon>FicInversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistograme.resx">
+      <DependentUpon>FormHistograme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNumerique.resx">
+      <DependentUpon>formNumerique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Listes.resx">
       <DependentUpon>Listes.cs</DependentUpon>

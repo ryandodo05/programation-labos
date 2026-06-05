@@ -99,5 +99,16 @@ namespace progra_projet_LABEYE
             portscoms f3 = new portscoms(); f3.Show();
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormHistograme f3 = new FormHistograme(); f3.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            formNumerique f3 = new formNumerique(); f3.Show();
+
+        }
     }
 }
